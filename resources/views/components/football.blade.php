@@ -18,7 +18,7 @@
 
         <div class="row">
 
-          @foreach (App\Post::where('category_id',3)->where('status','PUBLISHED')->take(4)->get() as $post)
+          @foreach (App\Post::where('category_id',3)->where('status','PUBLISHED')->orderby('created_at','desc')->take(4)->get() as $post)
           <div class="col-sm-12 mb-3">
             <article>
               <a href="#" class="row">

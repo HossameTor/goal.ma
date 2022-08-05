@@ -76,28 +76,28 @@
             <a class="nav-link active" href="/">Acceuil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/1/articles">Football</a>
+            <a class="nav-link" href="/sport/football">Football</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/2/articles">Tennis</a>
+            <a class="nav-link" href="/sport/tennis">Tennis</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/3/articles">Rugby</a>
+            <a class="nav-link" href="/sport/rugby">Rugby</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/4/articles">Cyclisme</a>
+            <a class="nav-link" href="/sport/cyclisme">Cyclisme</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/5/articles">Basket</a>
+            <a class="nav-link" href="/sport/basket">Basket</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/6/articles">People</a>
+            <a class="nav-link" href="/sport/people">People</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/7/articles">Videos</a>
+            <a class="nav-link" href="/sport/videos">Videos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/8/articles">Divers</a>
+            <a class="nav-link" href="/8/divers">Divers</a>
           </li>
         </ul>
       </nav>

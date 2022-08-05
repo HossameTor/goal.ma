@@ -1,5 +1,7 @@
 <?php
 
+use App\Post;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AffichageController;
 
@@ -15,13 +17,21 @@ use App\Http\Controllers\AffichageController;
 */
 
 Route::get('/', function () {
+
+    $PendingPosts = Post::whereStatus('PENDING')->get();
+    foreach($PendingPosts as $PendingPost){
+        if($PendingPost->planned <= Carbon::now()->timezone('Africa/Casablanca')){
+            $PendingPost->status = 'PUBLISHED';
+            $PendingPost->save();
+        }
+    }
     return view('Acceuil');
 });
 
 // Route::get('/article/{slug}',[AffichageController::class,'afficher']);
-Route::group(['prefix' => 'blog'], function () {
+Route::group(['prefix' => 'sport'], function () {
     Route::get('/{cateslug}/{slug}', 'App\Http\Controllers\AffichageController@show')->name('show');
-    // Route::get('/{id}', 'BlogController@category')->name('category');
+    Route::get('/{slug}', 'App\Http\Controllers\AffichageController@category')->name('category');
 });
 
 Route::group(['prefix' => 'admin'], function () {
