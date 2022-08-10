@@ -23,6 +23,12 @@ class VoyagerInscritsController extends \TCG\Voyager\Http\Controllers\VoyagerBas
     public function storeFromSite(Request $request){
         $inscrit = new Inscrit;
         $inscrit->email = request('email');
+        $inscrit->nom_complet = request('nom_complet');
+        $inscrit->telephone = request('telephone');
+        $inscrit->fonction = request('fonction');
+        $inscrit->conditions = request('conditions');
+        $inscrit->newsgoal = request('newsgoal');
+        $inscrit->newspartenaire = request('newspartenaire');
         $inscrit->save();
         return redirect('/');
     }

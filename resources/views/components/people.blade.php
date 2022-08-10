@@ -27,7 +27,7 @@
             @php
               \Carbon\Carbon::setLocale('fr');
             @endphp
-            <span class="art_date">{{ $post->updated_at->diffForHumans() }}</span>
+            <span class="art_date">{{ $post->created_at->diffForHumans() }}</span>
           </div>
         </a>
       </article>
@@ -49,7 +49,7 @@
               @php
                   \Carbon\Carbon::setLocale('fr');
               @endphp
-              <span class="art_date">{{ $post->updated_at->diffForHumans() }}</span>
+              <span class="art_date">{{ $post->created_at->diffForHumans() }}</span>
               <h3 class="art_title">
                 {{ $post->title }}
               </h3>

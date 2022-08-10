@@ -17,6 +17,9 @@ use App\Http\Controllers\VoyagerInscritsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/inscription-NewsLetter',function(){
+    return view('inscription');
+});
 Route:: get('/newsletter',function(){
     \Carbon\Carbon::setLocale('fr');
     return view('newsletter');
