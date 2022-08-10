@@ -64,7 +64,8 @@
             <h5 class="text-center mb-3">
               Recevez nos dernières actualités
             </h5>
-            <form action="">
+            <form action="/inscritfromsite" method="POST">
+              @csrf
               <div>
                 <input
                   type="email"
@@ -77,7 +78,7 @@
                 />
     
                 <button class="btn btn-primary" type="submit">
-                  Button
+                  S'abonner
                 </button>
               </div>
             </form>

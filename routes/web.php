@@ -2,8 +2,10 @@
 
 use App\Post;
 use Illuminate\Support\Carbon;
+use TCG\Voyager\Facades\Voyager;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AffichageController;
+use App\Http\Controllers\VoyagerInscritsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,10 @@ use App\Http\Controllers\AffichageController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route:: get('/newsletter',function(){
+    \Carbon\Carbon::setLocale('fr');
+    return view('newsletter');
+});
 Route::get('/', function () {
 
     $PendingPosts = Post::whereStatus('PENDING')->get();
@@ -33,6 +38,8 @@ Route::group(['prefix' => 'sport'], function () {
     Route::get('/{cateslug}/{slug}', 'App\Http\Controllers\AffichageController@show')->name('show');
     Route::get('/{slug}', 'App\Http\Controllers\AffichageController@category')->name('category');
 });
+
+Route::post('/inscritfromsite',[VoyagerInscritsController::class,'storeFromSite']);
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
