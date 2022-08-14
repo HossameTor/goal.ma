@@ -4,7 +4,7 @@
       <div class="section_title">
         <h2>People</h2>
         <div class="separator"></div>
-        <a href="#"
+        <a href="/sport/people"
           >Voir tous les articles People<i
             class="fas fa-arrow-right"
           ></i
@@ -16,7 +16,7 @@
     @if( $post = App\Post::whereCategoryId(9)->where('status','PUBLISHED')->first())
     <div class="col-md-12 mb-3">
       <article class="big">
-        <a href="">
+        <a href="/sport/{{ $post->category->name }}/{{ $post->slug}}">
           <figure>
             <img src={{ url("storage/".$post->image) }} alt="" />
           </figure>
@@ -37,7 +37,7 @@
     @foreach ( App\Post::whereCategoryId(9)->where('status','PUBLISHED')->skip(1)->take(3)->get() as $post)
     <div class="col-md-12 mb-3">
       <article>
-        <a href="" class="row">
+        <a href="/sport/{{ $post->category->name }}/{{ $post->slug}}" class="row">
           <div class="col-4">
             <figure>
               <img src={{ url("storage/".$post->image) }} alt="" />

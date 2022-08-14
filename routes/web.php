@@ -5,6 +5,7 @@ use Illuminate\Support\Carbon;
 use TCG\Voyager\Facades\Voyager;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AffichageController;
+use Spatie\CookieConsent\CookieConsentMiddleware;
 use App\Http\Controllers\VoyagerInscritsController;
 
 /*
@@ -17,6 +18,9 @@ use App\Http\Controllers\VoyagerInscritsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/contact',function(){
+    return view('contact');
+});
 Route::get('/inscription-NewsLetter',function(){
     return view('inscription');
 });
@@ -36,7 +40,6 @@ Route::get('/', function () {
     return view('Acceuil');
 });
 
-// Route::get('/article/{slug}',[AffichageController::class,'afficher']);
 Route::group(['prefix' => 'sport'], function () {
     Route::get('/{cateslug}/{slug}', 'App\Http\Controllers\AffichageController@show')->name('show');
     Route::get('/{slug}', 'App\Http\Controllers\AffichageController@category')->name('category');

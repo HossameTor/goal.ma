@@ -10,7 +10,7 @@
     @foreach (App\Post::orderBy('nb_vues', 'desc')->where('status','PUBLISHED')->take(4)->get() as $post)
     <div class="col-sm-12 mb-3">
       <article>
-        <a href="#" class="row">
+        <a href="/sport/{{ $post->category->name }}/{{ $post->slug}}" class="row">
           <div class="col-8 order-sm-1 order-2">
             <div class="art_details">
               <h3 class="art_title">

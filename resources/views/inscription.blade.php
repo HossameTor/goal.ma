@@ -33,7 +33,7 @@
             <div class="col-md-6">
               <div class="mb-3" id="fonction">
 
-                <label for="select" class="form-label">Choose</label>
+                <label for="select" class="form-label">Fonction</label>
 
                 <select class="form-control select2 select2-hidden-accessible" name="fonction" data-select2-id="1" tabindex="-1" aria-hidden="true" id="fct" onchange="ok()">
                   <option value="1" data-select2-id="3">----</option>
@@ -41,7 +41,7 @@
                   <option value="3">Cadre</option>
                   <option value="4">Direction général</option>
                   <option value="5">Professions libérales</option>
-                  <option value="6">Assistante de diraction</option>
+                  <option value="6">Assistante de direction</option>
                   <option value="7">Etudiant(e)</option>
                   <option value="8">Retraité</option>
                   <option value="9">Employé(e) de bureau</option>
@@ -69,7 +69,7 @@
             </div>
           </div>
 
-          <button type="submit" class="mt-4 btn btn-success" disabled = "disabled" id="buttonCon">Submit</button>
+          <button type="submit" class="mt-4 btn btn-success" disabled = "disabled" id="buttonCon">Envoyer</button>
 
         </form>
 

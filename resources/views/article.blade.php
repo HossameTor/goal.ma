@@ -76,7 +76,8 @@
                     <h5 class="text-center mb-3">
                       Recevez nos dernières actualités
                     </h5>
-                    <form action="">
+                    <form action="/inscritfromsite" method="POST">
+                      @csrf
                       <div>
                         <input
                           type="email"
@@ -89,7 +90,7 @@
                         />
             
                         <button class="btn btn-primary" type="submit">
-                          Button
+                          S'abonner
                         </button>
                       </div>
                     </form>
@@ -106,51 +107,22 @@
                 <div class="separator"></div>
               </div>
             </div>
+            @foreach ($postrelatifs as $postrelatif)
             <div class="col-md-4">
               <article>
                 <a href="#">
                   <figure>
-                    <img src="assets/images/download (1).webp" alt="" />
+                    <img src={{ url("storage/".$postrelatif->image) }} alt="" />
                   </figure>
                   <div class="art_details">
                     <h3 class="art_title">
-                      Ole Gunnar Solskjaer hails Jesse Lingard's mental strength
-                      after Man Utd
+                      {{ $postrelatif->title }}
                     </h3>
                   </div>
                 </a>
               </article>
             </div>
-            <div class="col-md-4">
-              <article>
-                <a href="#">
-                  <figure>
-                    <img src="assets/images/download (1).webp" alt="" />
-                  </figure>
-                  <div class="art_details">
-                    <h3 class="art_title">
-                      Ole Gunnar Solskjaer hails Jesse Lingard's mental strength
-                      after Man Utd
-                    </h3>
-                  </div>
-                </a>
-              </article>
-            </div>
-            <div class="col-md-4">
-              <article>
-                <a href="#">
-                  <figure>
-                    <img src="assets/images/download (1).webp" alt="" />
-                  </figure>
-                  <div class="art_details">
-                    <h3 class="art_title">
-                      Ole Gunnar Solskjaer hails Jesse Lingard's mental strength
-                      after Man Utd
-                    </h3>
-                  </div>
-                </a>
-              </article>
-            </div>
+            @endforeach
           </div>
         </div>
       </section>

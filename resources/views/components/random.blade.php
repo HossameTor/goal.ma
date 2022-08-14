@@ -19,7 +19,7 @@
               <div class="carousel-item @if($loop->index===0) active @endif">
                   <img class="d-block w-100" src={{ url("storage/".$post->image) }} alt="First slide">
                   <div class="carousel-caption d-none d-md-block">
-                    <a href="#"><h5>{{ $post->title }}</h5></a>
+                    <a href="/sport/{{ $post->category->name }}/{{ $post->slug}}"><h5>{{ $post->title }}</h5></a>
                   </div>
               </div>
               
@@ -46,7 +46,7 @@
         
         <div class="col-md-3 mb-3 mb-md-0">
           <article>
-            <a href="#">
+            <a href="/sport/{{ $post->category->name }}/{{ $post->slug}}">
               <figure>
                 <img src={{ url("storage/".$post->image) }} alt="" height="150px"/>
               </figure>

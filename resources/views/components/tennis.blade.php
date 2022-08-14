@@ -7,7 +7,7 @@
             <div class="section_title">
               <h2>Tennis</h2>
               <div class="separator"></div>
-              <a href="#"
+              <a href="/sport/tennis"
                 >Voir tous les articles Tennis<i
                   class="fas fa-arrow-right"
                 ></i
@@ -19,7 +19,7 @@
           @foreach (App\Post::where('category_id',4)->where('status','PUBLISHED')->take(4)->get() as $post)
           <div class="col-md-6 mb-3">
             <article>
-              <a href="#">
+              <a href="/sport/{{ $post->category->name }}/{{ $post->slug}}">
                 <figure>
                   <img src={{ url("storage/".$post->image) }} alt="" />
                 </figure>

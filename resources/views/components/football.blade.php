@@ -7,7 +7,7 @@
             <div class="section_title">
               <h2>Football</h2>
               <div class="separator"></div>
-              <a href="#"
+              <a href="/sport/football"
                 >Voir tous les articles Football<i
                   class="fas fa-arrow-right"
                 ></i
@@ -21,7 +21,7 @@
           @foreach (App\Post::where('category_id',3)->where('status','PUBLISHED')->orderby('created_at','desc')->take(4)->get() as $post)
           <div class="col-sm-12 mb-3">
             <article>
-              <a href="#" class="row">
+              <a href="/sport/{{ $post->category->name }}/{{ $post->slug}}" class="row">
                 <div class="col-md-3">
                   <figure>
                     <img src={{ url("storage/".$post->image) }} alt="" />

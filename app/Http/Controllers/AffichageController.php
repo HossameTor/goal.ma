@@ -16,7 +16,7 @@ class AffichageController extends Controller
     public function category($slug)
     {
         $category =  Category::whereSlug($slug)->first();
-        $posts = Post::where('status', 'published')
+        $posts = Post::where('status', 'published')->orderby('created_at','desc')
             ->whereCategoryId($category->id)
             ->take(9)
             ->paginate(9);
@@ -27,10 +27,12 @@ class AffichageController extends Controller
     }
     public function show($cateslug, $slug)
     {
+        
         $post = Post::where('slug', $slug)
             ->where('status', 'published')
             ->firstOrFail();
+        $postrelatifs = Post::whereCategoryId($post->category_id)->where('status', 'published')->take(3)->get();
         $post->increment('nb_vues');
-        return view('article', compact('post'));
+        return view('article', compact('post','postrelatifs'));
     }
 }

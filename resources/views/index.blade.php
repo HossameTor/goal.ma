@@ -7,26 +7,29 @@
     <meta name="keyword" content="sport , football , basketball , tennis" />
     <meta name="description" content="" />
     <title>Goal.ma</title>
-
+     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"> --}}
     <!-- css -->
-    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
     <link rel="preconnect" href={{ asset("https://fonts.googleapis.com") }} />
-    <link rel="stylesheet" href={{ asset("https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css") }}>
     <link rel="preconnect" href={{ asset("https://fonts.gstatic.com") }} crossorigin />
     <link
       rel="stylesheet"
       href={{ asset("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800&display=swap") }}
     />
+    
+    <link rel="stylesheet" href={{ asset("assets/css/bootstrap.min.css") }}>
     <link
       rel="stylesheet"
       href={{ asset("https://use.fontawesome.com/releases/v5.15.4/css/all.css") }}
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
+    
     <link rel="stylesheet" href={{ asset("assets/css/slick-theme.css") }} />
     <link rel="stylesheet" href={{ asset("assets/css/slick.css") }} />
     <link rel="stylesheet" href={{ asset("assets/css/normalize.css") }} />
     <link rel="stylesheet" href={{ asset("assets/css/style.css") }} />
+
     <!-- end css  -->
     <style>
       a:hover{
@@ -45,8 +48,8 @@
               <span></span>
               <span></span>
             </button>
-            <a class="logo_brand" href="index.html"
-              ><img src={{ asset("assets/images/logo.png") }} alt="logo goal.ma"
+            <a class="logo_brand" href="/"
+              ><img src={{ url("assets/images/logo.png") }} alt="logo goal.ma"
             /></a>
           </div>
           <div
@@ -65,7 +68,7 @@
                 ></a>
               </li>
             </ul>
-            <a href="#" class="btn sabonner">S'abonner</a>
+            <a href="/inscription-NewsLetter" class="btn sabonner">S'abonner</a>
           </div>
         </div>
       </div>
@@ -119,28 +122,28 @@
           <div class="col-sm-5 text-center">
             <ul class="links_footer list-unstyled">
               <li class="nav-item">
-                <a class="nav-link active" href="/1/articles">Football</a>
+                <a class="nav-link active" href="/sport/football">Football</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/2/articles">Tennis</a>
+                <a class="nav-link" href="/sport/tennis">Tennis</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/3/articles">Rugby</a>
+                <a class="nav-link" href="/sport/rugby">Rugby</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/4/articles">Cyclisme</a>
+                <a class="nav-link" href="/sport/cyclisme">Cyclisme</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/5/articles">Basket</a>
+                <a class="nav-link" href="/sport/basket">Basket</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/6/articles">People</a>
+                <a class="nav-link" href="/sport/people">People</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/7/articles">Videos</a>
+                <a class="nav-link" href="/sport/videos">Videos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/8/articles">Divers</a>
+                <a class="nav-link" href="/sport/divers">Divers</a>
               </li>
             </ul>
           </div>
@@ -166,16 +169,17 @@
           </div>
         </div>
       </div>
+      
     </footer>
 
     <!-- scripts -->
 
-    <script src={{ asset("assets/js/jquery.js") }}></script>
+    <script src={{ asset("assets/js/jquery.slim.min.js") }}></script>
     <script src={{ asset("assets/js/bootstrap.bundle.min.js") }}></script>
+    <script src={{ asset("assets/js/apps.js") }}></script>
     <script src={{ asset("assets/js/slick.min.js") }}></script>
     <script src={{ asset("assets/js/main.js") }}></script>
     
-    <script src={{ asset("https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js") }}></script>
     <!-- end scripts  -->
   </body>
 </html>

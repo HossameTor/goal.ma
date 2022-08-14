@@ -33,7 +33,7 @@
                             @if($loop->index==0)
                             <div class="col-sm-12 mb-3">
                                 <article>
-                                    <a href={{ url("/".$category->slug."articles/".$post->slug) }}>
+                                    <a href={{ url("/sport"."/".$category->slug."/".$post->slug) }}>
                                         <figure>
                                             <img src={{ url("storage/".$post->image) }} alt="" />
                                         </figure>
@@ -52,7 +52,7 @@
                             @else
                             <div class="col-sm-6 mb-3">
                                 <article>
-                                    <a href="/{{ $category->slug}}/articles/{{ $post->slug}}">
+                                    <a href={{ url("/sport"."/".$category->slug."/".$post->slug) }}>
                                         <figure>
                                             <img src={{ url("storage/".$post->image) }} alt="" height="200px"/>
                                         </figure>
@@ -61,7 +61,7 @@
                                             @php
                                                 \Carbon\Carbon::setLocale('fr');
                                             @endphp
-                                            <span class="art_date">{{ $post->updated_at->diffForHumans() }}</span>
+                                            <span class="art_date">{{ $post->created_at->diffForHumans() }}</span>
                                             <h3 class="art_title">
                                                 {{ $post->title }}
                                             </h3>
@@ -82,11 +82,9 @@
 
                         <div class="row mt-5" >
                             <div class="col-md-12">
-                                <nav aria-label="Page navigation example">
-                                    <ul class="pagination">
-                                      {{ $posts->links() }}
-                                    </ul>
-                                  </nav>
+                                <div class="d-flex">
+                                    {!! $posts->links() !!}
+                                </div>
                             </div>
                         </div>
                       
@@ -117,12 +115,13 @@
                                 <h5 class="text-center mb-3">
                                   Recevez nos dernières actualités
                                 </h5>
-                                <form action="">
+                                <form action="/inscritfromsite" method="POST">
+                                    @csrf
                                   <div>
                                     <input type="email" name="email" required="" class="form-control" placeholder="adresse email" id="newsletter_input" aria-label="">
             
                                     <button class="btn btn-primary" type="submit">
-                                      Button
+                                        S'abonner
                                     </button>
                                   </div>
                                 </form>

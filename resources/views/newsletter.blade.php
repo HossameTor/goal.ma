@@ -181,7 +181,7 @@
 <script src={{ asset("assets/js/jquery.js") }}></script>
 <script src={{ asset("assets/js/bootstrap.bundle.min.js") }}></script>
 <script src={{ asset("assets/js/slick.min.js") }}></script>
-<script src={{ asset("assets/js/main.js") }}></script>
+
 
 <script src={{ asset("https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js") }}></script>
 <!-- end scripts  -->

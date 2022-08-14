@@ -21,6 +21,8 @@
   }
 </style>
 <main>
+
+@include('cookieConsent::index')
     <!-- banniere publicitere -->
     <section class="banniere_pub_outside bg-light">
       <div class="container">
