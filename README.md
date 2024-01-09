@@ -1,6 +1,6 @@
 # Sports News Management Web Application (goal.ma)
 
-Welcome to the Sports News Management web application repository! This application is built with Laravel 8 and is designed to help you manage and share sports news effortlessly. 
+Welcome to the Sports News Management web application repository! This application is built with Laravel 8 and is designed to help you manage and share sports news effortlessly.
 
 ## Features 🌟
 
